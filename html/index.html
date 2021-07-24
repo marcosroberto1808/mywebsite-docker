@@ -1,18 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Site</title>
+    <meta name="description" content="Trabalho AV1">
+    <meta name="keywords" content="HTML,CSS,TRABALHO,ESTACIO">
+    <meta name="author" content="Marcos Roberto">
+    <title>Trabalho AV1 - Marcos Roberto</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+
 </head>
+
 <body>
+    <div class="container">
+        <div class="grid header">Site de Jogos do Marcos Roberto</div>
+        <div class="grid navbar">
 
-    <h1>Meu Exemplo de Site</h1>
+            <div class="topnav">
+                <a href="#home">Home</a>
+                <a href="#news">Lista de jogos</a>
+                <a href="#news">Dicas</a>
+                <a href="#news">Gaming Hardware</a>
+                <a href="#news">Reviews</a>
+                <a href="#news">Scripts</a>
+                <a href="#news">Softwares</a>
+                <a href="#news">Anúncios</a>
+                <a href="#contact">Downloads</a>
+                <!-- <a style="float:right" href="#about">Contato</a> -->
+                <a href="paginas/contato.html">Contato</a>
+            </div>
 
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, unde voluptatem repellendus odit necessitatibus culpa quae, veritatis, nostrum qui earum ad. Nemo aliquid esse perferendis minus fugiat sit? Velit cupiditate possimus earum nam labore ratione molestiae hic harum, molestias inventore nesciunt odit sit temporibus odio magni est aliquam qui dignissimos.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere exercitationem consequuntur est fugiat amet, quod fugit autem excepturi soluta dicta! Nam, tenetur ea recusandae ipsum unde minima? Natus illo ab vero esse saepe, sapiente quaerat ut nihil quibusdam odio debitis? Numquam quo eveniet atque nihil commodi vero accusamus alias illo.</p>
-    
-    
+        </div>
+        <div class="grid sidebar">
+            <div class="text-box">
+                <form>
+                    <input type="text" name="pesquisa" placeholder="Digite o termo e pressione enter!"><br>
+                </form>
+            </div>
+
+            <div class="grid content-4">
+                <h2>Mais lidos</h2>
+                <div class="content-box">
+                    <ul>
+                        <li>Counter-Strike: Global Offensive (CS: GO)</li>
+                        <li>Grand Theft Auto V</li>
+                        <li>PLAYERUNKNOWN'S BATTLEGROUNDS</li>
+                        <li>Titan Quest: Atlantis</li>
+                        <li>Mortal Kombat 11</li>
+
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="image-box">
+
+                <div class="image-box-1">
+                    <a target="_blank" href="https://www.ea.com/pt-br/games/apex-legends"><img
+                            src="images/apex-capa.jpg" alt="" width="120px" height="120px"></a>
+
+                </div>
+                <div class="image-box-1">
+                    <a href="https://www.origin.com/bra/pt-br/store/battlefield/battlefield-1"><img
+                            src="images/battlefield-capa.jpg" alt="" width="120px" height="120px"></a>
+
+                </div>
+                <div class="image-box-1">
+                    <a href="https://www.rockstargames.com/V" target="_blank"><img
+                            src="images/Grand_Theft_Auto_V_capa.png" alt="" width="120px" height="120px"></a>
+
+                </div>
+                <div class="image-box-1">
+                    <a href="https://play.br.leagueoflegends.com/pt_BR" target="_blank"><img
+                            src="images/league_of_legends_capa.jpg" alt="" width="120px" height="120px"></a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+        <div class="grid content-1">
+            <h2>Destaques</h2>
+            <div class="image-box">
+                <img src="images/csgo-image1.jpg" alt="" width="180px" height="180px">
+
+            </div>
+            <div class="content-box">
+                <h3>Counter-Strike: Global Offensive</h3>
+                <p>Counter-Strike: Global Offensive (CS: GO) expands upon the team-based action gameplay that it
+                    pioneered when it was launched 19 years ago. CS: GO features new maps, characters, weapons, and game
+                    modes, and delivers updated versions of the classic CS content (de_dust2, etc.).</p>
+                <p> </p>
+                <p style="text-align: right;"><a href="#">Leia Mais</a></p>
+            </div>
+        </div>
+
+        <div class="grid content-2">
+            <h2>Atualizações recentes</h2>
+            <div class="content-box">
+                <h3>Alterações no processo de envio da Oficina</h3>
+                <p>Com a atualização de hoje, estamos realizando uma alteração no processo de envios da Oficina para
+                    evitar itens fraudulentos. Agora, ao fazer um envio para a Oficina do CS:GO pela primeira vez, será
+                    solicitada uma verificação por e-mail para que o item possa ser listado publicamente. Aqueles que já
+                    realizaram envios à Oficina anteriormente não sofrerão nenhuma mudança. </p>
+                <h4 style="margin-left: 10px;">Por trás do problema</h4>
+                <p>O que queremos dizer com itens fraudulentos? Caso navegue bastante pela Oficina, você pode se deparar
+                    com itens cujas imagens são armas e/ou facas raras, prometendo sorteios ou conteúdo gratuito. Muitas
+                    vezes, esses itens são acompanhados de links de phishing que podem colocar contas Steam em risco.
+                </p>
+                <p style="text-align: right;"><a href="#">Leia Mais</a></p>
+            </div>
+        </div>
+        <div class="grid content-3">
+            <h2>Sobre este jogo</h2>
+            <div class="content-box">
+                <!-- <h3>Montando Layout com CSS</h3> -->
+                <p>Counter-Strike: Global Offensive (CS: GO) expandirá na jogabilidade de ação baseada em equipes na
+                    qual foi pioneiro quando foi lançado há 12 anos.</p>
+
+                <p>CS: GO contém novos mapas, personagens e armas, além de conter versões atualizadas de conteúdos do CS
+                    clássico (como de_dust2). Além disso, CS: GO introduzirá novos modos de jogo, criação de partidas
+                    (matchmaking), placares de líderes e mais.</p>
+                <p>"Counter-Strike surpreendeu a indústria de jogos quando o improvável MOD virou o jogo de ação online
+                    para PC mais jogado no mundo quase imediatamente após seu lançamento em agosto de 1999," disse Doug
+                    Lombardi na Valve. "Pelos últimos 12 anos, ele continuou sendo um dos jogos mais jogados no mundo,
+                    manteve destaque em torneios competitivos de jogos e a franquia vendeu mais de 26 milhões de cópias
+                    no mundo todo. CS: GO promete expandir na jogabilidade premiada de CS' e permitir seu acesso por
+                    jogadores não só no PC, mas também em consoles de última geração e no Mac."</p>
+                <p style="text-align: right;"><a href="#">Leia Mais</a></p>
+            </div>
+        </div>
+
+        <div class="grid footer">© Copyright - Todos os direitos reservados - Marcos Roberto de Oliveira e Silva</div>
+    </div>
+
 </body>
+
 </html>

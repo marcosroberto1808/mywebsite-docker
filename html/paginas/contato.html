@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Trabalho AV1">
+    <meta name="keywords" content="HTML,CSS,TRABALHO,ESTACIO">
+    <meta name="author" content="Marcos Roberto">
+    <title>Trabalho AV1 - Contato</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="grid header">Site de Jogos do Marcos Roberto</div>
+        <div class="grid navbar">
+
+            <div class="topnav">
+                <a href="../index.html">Home</a>
+                <a href="#news">Lista de jogos</a>
+                <a href="#news">Dicas</a>
+                <a href="#news">Gaming Hardware</a>
+                <a href="#news">Reviews</a>
+                <a href="#news">Scripts</a>
+                <a href="#news">Softwares</a>
+                <a href="#news">Anúncios</a>
+                <a href="#contact">Downloads</a>
+                <!-- <a style="float:right" href="#about">Contato</a> -->
+                <a href="#about">Contato</a>
+            </div>
+
+        </div>
+        <div class="grid sidebar">
+
+        </div>
+        <div class="grid content-1">
+            <h2>Contato</h2>
+
+            <div class="content-box">
+                <h3>Informações de contato:</h3>
+
+                <div class="formulario">
+
+                    <form action="javascript:alert('Mensagem enviada! Obrigado por manter em contato!')">
+
+                        <label id="fnome" for="fname">Nome</label>
+                        <input type="text" id="fname" name="firstname" required placeholder="Digite o nome..">
+
+                        <label for="email"><b>Email</b></label>
+                        <input type="email" placeholder="exemplo@dominio.com" name="email" required>
+
+                        <label for="cidades">Cidade</label>
+                        <select id="cidades" name="cidades">
+                            <option value="fortaleza">Fortaleza</option>
+                            <option value="russas">Russas</option>
+                            <option value="jaguaruana">Jaguaruana</option>
+                        </select>
+
+                        <label id="assunto" for="subject">Assunto</label>
+                        <textarea id="subject" name="subject" placeholder="Escreva sua mensagem.."></textarea>
+
+                        <input type="submit" value="Enviar">
+
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="grid footer">© Copyright - Todos os direitos reservados - Marcos Roberto de Oliveira e Silva</div>
+    </div>
+
+</body>
+
+</html>
