@@ -27,7 +27,7 @@
     docker_container:
       name: mywebsite-docker-container
       image:  mywebsite-docker-image
-      state: started
+      state: absent
       restart: yes
       recreate: yes
       auto_remove: yes
