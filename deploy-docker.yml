@@ -3,3 +3,7 @@
     - dev
   tasks:
     - action: ping
+
+- git:
+    repo: 'https://github.com/marcosroberto1808/mywebsite-docker'
+    dest: /home/deploy/
