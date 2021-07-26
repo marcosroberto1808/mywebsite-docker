@@ -10,15 +10,6 @@
     docker_image:
       name: mywebsite-docker-image
       build:
-        path: /home/vagrant/deploy
+        path: /home/vagrant/deploy/Dockerfile
         source: build
       state: present
-   
-  - name: run container 
-    docker:
-     name: mywebsite-docker-container
-     image: mywebsite-docker-image
-     state: started
-     expose:
-      - 80
-
