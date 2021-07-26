@@ -20,6 +20,7 @@
       path: /home/vagrant/deploy/
       dockerfile: Dockerfile
       state: absent
+      force: yes
       
   - name: Build container image
     docker_image:
@@ -27,12 +28,14 @@
       path: /home/vagrant/deploy/
       dockerfile: Dockerfile
       state: Present
+      force: yes
 
   - name: Delete  container
     docker_container:
       name: mywebsite-docker-container
       image:  mywebsite-docker-image
       state: absent
+      force: yes
 
   - name: Start  container
     docker_container:
