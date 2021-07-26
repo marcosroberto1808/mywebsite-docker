@@ -17,13 +17,16 @@
   - name: Build container image
     docker_image:
       name: mywebsite-docker-image
-      path: /home/vagrant/deploy/
+      build.path: /home/vagrant/deploy/
+      build.dockerfile: Dockerfile
       state: present
       
   - name: Create and run container
     docker_container:
       name: mywebsite-docker-container
       image:  mywebsite-docker-image
-      state: present
+      state: started
+      restart: yes
+      recreate: yes
       ports:
        - "80:80"
