@@ -19,6 +19,7 @@
       name: mywebsite-docker-image
       path: /home/vagrant/deploy/
       dockerfile: Dockerfile
+      rm: yes
       state: present
       
   - name: Create and run container
