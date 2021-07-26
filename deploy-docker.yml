@@ -26,5 +26,5 @@
       name: mywebsite-docker-container
       image:  mywebsite-docker-image
       state: present
-      exposed_ports:
-        - 80
+      ports:
+       - "80:80"
