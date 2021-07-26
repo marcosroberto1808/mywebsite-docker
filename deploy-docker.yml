@@ -8,8 +8,7 @@
       
   - name: build container image
     docker_image:
-      build:
-        name: mywebsite-docker-image
-          path: /home/vagrant/deploy/
-          dockerfile: Dockerfile
-          state: present
+      name: mywebsite-docker-image
+      path: /home/vagrant/deploy/
+      dockerfile: Dockerfile
+      state: present
