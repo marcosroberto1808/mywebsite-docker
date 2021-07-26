@@ -9,7 +9,7 @@ pipeline {
             }
         }
         
-        stage('Ansible Ping') {
+        stage('Deploy') {
             steps {
                 ansiblePlaybook disableHostKeyChecking: true, playbook: 'deploy-docker.yml'
             }
