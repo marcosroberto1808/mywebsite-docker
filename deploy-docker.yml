@@ -1,9 +1,13 @@
 ---
 - hosts:
     - dev
+ - name: Ping Server
   tasks:
     - action: ping
 
-- git:
-    repo: 'https://github.com/marcosroberto1808/mywebsite-docker.git'
-    dest: /home/deploy/
+- name: Clone a private repository into /opt.
+  git:
+    repo: https://github.com/marcosroberto1808/mywebsite-docker.git
+    version: master
+    dest: /home/deploy
+    accept_hostkey: yes
