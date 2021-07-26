@@ -7,8 +7,9 @@
       dest: /home/vagrant/deploy
       
   - name: build container image
-    build:
-      name: mywebsite-docker-image
-      path: /home/vagrant/deploy/
-      dockerfile: Dockerfile
-      state: present
+    docker_image:
+      build:
+        name: mywebsite-docker-image
+          path: /home/vagrant/deploy/
+          dockerfile: Dockerfile
+          state: present
