@@ -14,18 +14,31 @@
     pip:
       name: docker
       
+  - name: Remove container image
+    docker_image:
+      name: mywebsite-docker-image
+      path: /home/vagrant/deploy/
+      dockerfile: Dockerfile
+      state: absent
+      
   - name: Build container image
     docker_image:
       name: mywebsite-docker-image
       path: /home/vagrant/deploy/
       dockerfile: Dockerfile
- 
-      
-  - name: Create and run container
+      state: Present
+
+  - name: Delete  container
     docker_container:
       name: mywebsite-docker-container
       image:  mywebsite-docker-image
-      state: started
+      state: absent
+
+  - name: Start  container
+    docker_container:
+      name: mywebsite-docker-container
+      image:  mywebsite-docker-image
+      state: absent
       restart: yes
       recreate: yes
       auto_remove: yes
