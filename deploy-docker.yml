@@ -5,5 +5,5 @@
     - action: ping
 
 - git:
-    repo: 'https://github.com/marcosroberto1808/mywebsite-docker'
+    repo: 'https://github.com/marcosroberto1808/mywebsite-docker.git'
     dest: /home/deploy/
