@@ -21,6 +21,7 @@
       dockerfile: Dockerfile
       rm: yes
       state: present
+      force: yes
       
   - name: Create and run container
     docker_container:
