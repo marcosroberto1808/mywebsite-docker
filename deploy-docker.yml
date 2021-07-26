@@ -1,12 +1,5 @@
 ---
-- hosts: dev
-  become: True
+- hosts:
+    - dev
   tasks:
-    - name: Install python-pip
-      apt:
-        name: python-pip
-        state: present
-    - name: Install docker-py python module
-      pip:
-        name: docker-py
-        state: present
+    - action: ping
