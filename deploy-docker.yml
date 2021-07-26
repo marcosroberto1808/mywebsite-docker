@@ -29,5 +29,6 @@
       state: started
       restart: yes
       recreate: yes
+      auto_remove: yes
       ports:
        - "80:80"
