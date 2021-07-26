@@ -1,12 +1,9 @@
 ---
-- hosts:
-    - dev
- - name: Ping Server
+- hosts: dev
   tasks:
-    - name: Ping Server
-    - action: ping
-
-    - name: Ensure repo is up-to-date
+      - name: Ping Server
+        - action: ping
+      - name: Ensure repo is up-to-date
         git:
             repo: https://github.com/marcosroberto1808/mywebsite-docker.git
             dest: /home/deploy
