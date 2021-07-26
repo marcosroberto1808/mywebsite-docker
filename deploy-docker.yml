@@ -27,21 +27,21 @@
       name: mywebsite-docker-image
       path: /home/vagrant/deploy/
       dockerfile: Dockerfile
-      state: Present
+      state: present
       force: yes
 
-  - name: Delete  container
+  - name: Delete container
     docker_container:
       name: mywebsite-docker-container
       image:  mywebsite-docker-image
       state: absent
       force: yes
 
-  - name: Start  container
+  - name: Start container
     docker_container:
       name: mywebsite-docker-container
       image:  mywebsite-docker-image
-      state: absent
+      state: started
       restart: yes
       recreate: yes
       auto_remove: yes
