@@ -6,9 +6,21 @@
       repo: https://github.com/marcosroberto1808/mywebsite-docker.git
       dest: /home/vagrant/deploy
       
-  - name: build container image
+  - name: Install Docker Module for Python
+    pip:
+      name: docker
+      
+  - name: Build container image
     docker_image:
       name: mywebsite-docker-image
       path: /home/vagrant/deploy/
       dockerfile: Dockerfile
       state: present
+      
+  - name: Create and run container
+    docker_container:
+      name: mywebsite-docker-container
+      image:  mywebsite-docker-image
+      state: present
+      exposed_ports:
+        - 80
