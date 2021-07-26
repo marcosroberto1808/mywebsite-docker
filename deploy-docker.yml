@@ -4,4 +4,4 @@
   - name: Clone Project
     git:
       repo: https://github.com/marcosroberto1808/mywebsite-docker.git
-      dest: /home/deploy
+      dest: /home/vagrant/deploy
