@@ -1,11 +1,18 @@
-#!groovy
+pipeline {
+    agent any
 
-
-Service {
-    build = []
-    publish = []
-    deploy = []
-  
-    autoPromotion = [ [ from: 'master', to: 'qa'] ]
-
+    stages {
+        
+        stage('Build') {
+            steps {
+                git 'https://github.com/marcosroberto1808/mywebsite-docker.git'
+            }
+        }
+        
+        stage('Ansible Ping') {
+            steps {
+                ansiblePlaybook disableHostKeyChecking: true, playbook: 'deploy-docker.yml'
+            }
+        }
+    }
 }
