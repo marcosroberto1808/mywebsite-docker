@@ -11,5 +11,4 @@
       name: mywebsite-docker-image
       path: /home/vagrant/deploy/
       dockerfile: Dockerfile
-      source: build
       state: present
