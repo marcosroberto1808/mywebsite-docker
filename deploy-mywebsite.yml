@@ -5,7 +5,7 @@
   - name: Clone Project
     git:
       repo: https://github.com/marcosroberto1808/mywebsite-docker.git
-      dest: /home/vagrant/deploy
+      dest: /home/vagrant/mywebsite-deploy
       
   - name: Install pip3
     apt: name=python3-pip state=present 
@@ -17,7 +17,7 @@
   - name: Remove container image
     docker_image:
       name: mywebsite-docker-image
-      path: /home/vagrant/deploy/
+      path: /home/vagrant/mywebsite-deploy/
       dockerfile: Dockerfile
       state: absent
       force: yes
@@ -25,7 +25,7 @@
   - name: Build container image
     docker_image:
       name: mywebsite-docker-image
-      path: /home/vagrant/deploy/
+      path: /home/vagrant/mywebsite-deploy/
       dockerfile: Dockerfile
       state: present
       force: yes

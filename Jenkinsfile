@@ -11,7 +11,7 @@ pipeline {
         
         stage('Deploy') {
             steps {
-                ansiblePlaybook disableHostKeyChecking: true, playbook: 'deploy-docker.yml'
+                ansiblePlaybook disableHostKeyChecking: true, playbook: 'deploy-mywebsite.yml'
             }
         }       
        
