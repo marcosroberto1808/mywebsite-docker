@@ -20,12 +20,12 @@
 
   - name: Tear down existing services
     docker_compose:
-      project_src: /home/vagrant/grafana-deploy/
+      project_src: /home/vagrant/mywebsite-deploy/
       state: absent
 
   - name: Create and start services
     docker_compose:
-      project_src: /home/vagrant/grafana-deploy/
+      project_src: /home/vagrant/mywebsite-deploy/
     register: output
 
   - ansible.builtin.debug:
@@ -33,6 +33,6 @@
 
   - name: Run `docker-compose up` again
     docker_compose:
-      project_src: /home/vagrant/grafana-deploy/
+      project_src: /home/vagrant/mywebsite-deploy/
       build: no
     register: output
