@@ -1,0 +1,32 @@
+version: '2'
+services:
+  mywebsite-docker:
+    build: .
+    container_name: mywebsite-docker
+    restart: always
+    ports:
+      - 80:80
+    networks:
+      - mywebsite-docker-network
+
+  telegraf:
+    image: telegraf
+    container_name: mywebsite-telegraf
+    restart: always
+    extra_hosts:
+      - "influxdb:192.168.50.13"
+    environment:
+      HOST_PROC: /rootfs/proc
+      HOST_SYS: /rootfs/sys
+      HOST_ETC: /rootfs/etc
+    networks:
+      - mywebsite-docker-network
+    volumes:
+      - ./telegraf/telegraf.conf:/etc/telegraf/telegraf.conf:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - /sys:/rootfs/sys:ro
+      - /proc:/rootfs/proc:ro
+      - /etc:/rootfs/etc:ro
+
+networks:
+  mywebsite-docker-network:
