@@ -14,36 +14,25 @@
     pip:
       name: docker
       
-  - name: Remove container image
-    docker_image:
-      name: mywebsite-docker-image
-      path: /home/vagrant/mywebsite-deploy/
-      dockerfile: Dockerfile
-      state: absent
-      force: yes
-      
-  - name: Build container image
-    docker_image:
-      name: mywebsite-docker-image
-      path: /home/vagrant/mywebsite-deploy/
-      dockerfile: Dockerfile
-      state: present
-      force: yes
+  - name: Install Docker Compose Module for Python
+    pip:
+      name: docker-compose
 
-  - name: Delete container
-    docker_container:
-      name: mywebsite-docker-container
-      image:  mywebsite-docker-image
+  - name: Tear down existing services
+    docker_compose:
+      project_src: /home/vagrant/grafana-deploy/
       state: absent
-      auto_remove: yes
 
-  - name: Start container
-    docker_container:
-      name: mywebsite-docker-container
-      image:  mywebsite-docker-image
-      state: started
-      restart: yes
-      recreate: yes
-      auto_remove: yes
-      ports:
-       - "80:80"
+  - name: Create and start services
+    docker_compose:
+      project_src: /home/vagrant/grafana-deploy/
+    register: output
+
+  - ansible.builtin.debug:
+      var: output
+
+  - name: Run `docker-compose up` again
+    docker_compose:
+      project_src: /home/vagrant/grafana-deploy/
+      build: no
+    register: output
